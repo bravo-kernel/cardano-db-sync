@@ -167,6 +167,7 @@ initInterpreter pinfo traceForge fingerprintFile = do
   forging <- pInfoBlockForging pinfo
   let topLeverCfg = pInfoConfig pinfo
   let initSt = pInfoInitLedger pinfo
+  print initSt
   let ledgerView = mkForecast topLeverCfg initSt
   (mode, fingerprint) <- mkFingerprint fingerprintFile
   let initState = InterpreterState
